@@ -1,0 +1,14 @@
+#En este segundo ejercicio, tenéis que crear una aplicación que obtendrá los 
+# elementos impares de una lista pasada por parámetro con filter y realizará 
+# una suma de todos estos elementos obtenidos mediante reduce.
+
+numeros=[3,5,10,5,3,7,6,8,11,18,13,11,4,20]
+def impar(x):
+    if x % 2==0:
+        return False
+    return True
+resultado=filter(impar,numeros)
+lista=list(resultado)
+print(lista)
+res=reduce(lambda a, b: a+b, lista)
+print('La suma de la lista de numeros impares es',res)
